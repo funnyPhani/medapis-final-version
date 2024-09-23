@@ -1,0 +1,13 @@
+ollama
+fastapi 
+uvicorn 
+pydantic 
+starlette 
+rich 
+pillow  
+python-multipart
+chromadb
+groq
+streamlit  
+python-dotenv 
+google.generativeai

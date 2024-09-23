@@ -1,0 +1,12 @@
+version: '3.11'
+services:
+  medapp1:
+    build:
+      context: .
+    ports:
+      - "8000:8000"  # For FastAPI
+      - "8501:8501"  # For Streamlit
+    volumes:
+      - .:/app
+    env_file:
+      - .env

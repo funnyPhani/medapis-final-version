@@ -1,0 +1,5 @@
+llm_model_name: qwen2.5:1.5b
+embd_model_name: mxbai-embed-large
+groq_model: llama-3.1-70b-versatile
+google_model: gemini-1.5-flash
+ollama_vision_model: llava:latest
