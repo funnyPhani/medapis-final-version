@@ -266,104 +266,544 @@
 
 
 
-from fastapi import FastAPI, File, UploadFile, Form
-from typing import Optional
-import ollama
-from fastapi.responses import HTMLResponse
-import requests
+# from fastapi import FastAPI, File, UploadFile, Form
+# from typing import Optional
+# import ollama
+# from fastapi.responses import HTMLResponse
+# import requests
 
-app = FastAPI()
+# app = FastAPI()
 
-# Helper function to fetch image from URL
-def fetch_image_from_url(image_url: str):
-    response = requests.get(image_url)
-    if response.status_code == 200:
-        return response.content
-    return None
+# # Helper function to fetch image from URL
+# def fetch_image_from_url(image_url: str):
+#     response = requests.get(image_url)
+#     if response.status_code == 200:
+#         return response.content
+#     return None
 
 
 
-# Endpoint 1: Analyze medical image (file or URL)
-@app.post("/analyze-medical-image/")
-async def analyze_medical_image(file: UploadFile = File(None), image_url: Optional[str] = Form(None)):
-    image_bytes = None
+# # Endpoint 1: Analyze medical image (file or URL)
+# @app.post("/analyze-medical-image/")
+# async def analyze_medical_image(file: UploadFile = File(None), image_url: Optional[str] = Form(None)):
+#     image_bytes = None
     
-    if file:
-        image_bytes = await file.read()  # Read the uploaded file
-    elif image_url:
-        image_bytes = fetch_image_from_url(image_url)  # Fetch image from URL
+#     if file:
+#         image_bytes = await file.read()  # Read the uploaded file
+#     elif image_url:
+#         image_bytes = fetch_image_from_url(image_url)  # Fetch image from URL
     
-    if image_bytes is None:
-        return {"error": "No valid image provided."}
+#     if image_bytes is None:
+#         return {"error": "No valid image provided."}
 
-    # Call the ollama model with the image
-    res = ollama.chat(
-        model="llava:latest",
-        messages=[
-            {
-                'role': 'user',
-                'content': """
-                    You are a medical practitioner and an expert in analyzing medical images. 
-                    Identify any anomalies, diseases, or health issues in the image. 
-                    Provide detailed findings, recommendations, and next steps. 
-                    If certain aspects are unclear, state 'Unable to determine based on the provided image.' 
-                    Also, include a disclaimer: 'Consult with a doctor before making any decisions.'
-                    Provide the information in only markdown format.
-                """,
-                'images': [image_bytes]
-            }
-        ]
-    )
-    print("-"*100)
-    print({"result": res['message']['content']})
-    print("-"*100)
+#     # Call the ollama model with the image
+#     res = ollama.chat(
+#         model="llava:latest",
+#         messages=[
+#             {
+#                 'role': 'user',
+#                 'content': """
+#                     You are a medical practitioner and an expert in analyzing medical images. 
+#                     Identify any anomalies, diseases, or health issues in the image. 
+#                     Provide detailed findings, recommendations, and next steps. 
+#                     If certain aspects are unclear, state 'Unable to determine based on the provided image.' 
+#                     Also, include a disclaimer: 'Consult with a doctor before making any decisions.'
+#                     Provide the information in only markdown format.
+#                 """,
+#                 'images': [image_bytes]
+#             }
+#         ]
+#     )
+#     print("-"*100)
+#     print({"result": res['message']['content']})
+#     print("-"*100)
 
-    return {"result": res['message']['content']}
+#     return {"result": res['message']['content']}
 
-# Endpoint 2: Analyze food image for nutrition (file or URL)
-@app.post("/analyze-food-image/")
-async def analyze_food_image(file: UploadFile = File(None), image_url: Optional[str] = Form(None)):
-    image_bytes = None
+# # Endpoint 2: Analyze food image for nutrition (file or URL)
+# @app.post("/analyze-food-image/")
+# async def analyze_food_image(file: UploadFile = File(None), image_url: Optional[str] = Form(None)):
+#     image_bytes = None
     
-    if file:
-        image_bytes = await file.read()  # Read the uploaded file
-    elif image_url:
-        image_bytes = fetch_image_from_url(image_url)  # Fetch image from URL
+#     if file:
+#         image_bytes = await file.read()  # Read the uploaded file
+#     elif image_url:
+#         image_bytes = fetch_image_from_url(image_url)  # Fetch image from URL
     
-    if image_bytes is None:
-        return {"error": "No valid image provided."}
+#     if image_bytes is None:
+#         return {"error": "No valid image provided."}
 
-    # Call the ollama model with the image
-    res = ollama.chat(
-        model="llava:latest",
-        messages=[
-            {
-                'role': 'user',
-                'content': """
-                    You are an expert nutritionist where you need to analyze the food items
-                    and calculate the total calories. Also, provide the details of each food item with its calorie intake in the following format:
-                    1. Item 1 - no. of calories
-                    2. Item 2 - no. of calories
-                    ----
-                    ----
-                    Afterward, mention if the meal is healthy or not and include the percentage ratio of
-                    carbohydrates, proteins, fats, sugar, and calories in the meal.
-                    Finally, give suggestions on which item should be removed or added to make the
-                    meal healthier if it's unhealthy.
-                """,
-                'images': [image_bytes]
-            }
-        ]
-    )
-    print("-"*100)
-    print({"result": res['message']['content']})
-    print("-"*100)
-    return {"result": res['message']['content']}
+#     # Call the ollama model with the image
+#     res = ollama.chat(
+#         model="llava:latest",
+#         messages=[
+#             {
+#                 'role': 'user',
+#                 'content': """
+#                     You are an expert nutritionist where you need to analyze the food items
+#                     and calculate the total calories. Also, provide the details of each food item with its calorie intake in the following format:
+#                     1. Item 1 - no. of calories
+#                     2. Item 2 - no. of calories
+#                     ----
+#                     ----
+#                     Afterward, mention if the meal is healthy or not and include the percentage ratio of
+#                     carbohydrates, proteins, fats, sugar, and calories in the meal.
+#                     Finally, give suggestions on which item should be removed or added to make the
+#                     meal healthier if it's unhealthy.
+#                 """,
+#                 'images': [image_bytes]
+#             }
+#         ]
+#     )
+#     print("-"*100)
+#     print({"result": res['message']['content']})
+#     print("-"*100)
+#     return {"result": res['message']['content']}
 
 # Run the application
 # if __name__ == "__main__":
 #     import uvicorn
 #     uvicorn.run(app, host="0.0.0.0", port=8000)
 
+
+
+# import streamlit as st
+# import base64
+# import os
+# from dotenv import load_dotenv
+# from openai import OpenAI
+# import tempfile
+
+# load_dotenv()
+
+# os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
+
+# client = OpenAI()
+
+# # medical image analyzer
+
+# sample_prompt = """You are a medical practictioner and an expert in analzying medical related images working for a very reputed hospital. You will be provided with images and you need to identify the anomalies, any disease or health issues. You need to generate the result in detailed manner. Write all the findings, next steps, recommendation, etc. You only need to respond if the image is related to a human body and health issues. You must have to answer but also write a disclaimer saying that "Consult with a Doctor before making any decisions".
+
+# Remember, if certain aspects are not clear from the image, it's okay to state 'Unable to determine based on the provided image.'
+
+# Now analyze the image and answer the above questions in the same structured manner defined above."""
+
+# # calorie tracker
+
+# sample_prompt = """
+#                     You are an expert in nutritionist where you need to see the food items from the image
+#                     and calculate the total calories, also provide the details of every food items with calories intake
+#                     is below format
+#                     1. Item 1 - no of calories
+#                     2. Item 2 - no of calories
+#                     ----
+#                     ----
+#                     After that mention that the meal is a healthy meal or not and also mention the percentage split of the ratio of
+#                     carbohydrates, proteins, fats, sugar, and calories in the meal.
+#                     Finally, give suggestions for which items should be removed and which items should be added to make the
+#                     meal healthy if it's unhealthy.
+#             """
+
+
+# # Initialize session state variables
+# if 'uploaded_file' not in st.session_state:
+#     st.session_state.uploaded_file = None
+# if 'result' not in st.session_state:
+#     st.session_state.result = None
+
+# def encode_image(image_path):
+#     with open(image_path, "rb") as image_file:
+#         return base64.b64encode(image_file.read()).decode('utf-8')
+
+# def call_gpt4_model_for_analysis(filename: str, sample_prompt=sample_prompt):
+#     base64_image = encode_image(filename)
+    
+#     messages = [
+#         {
+#             "role": "user",
+#             "content":[
+#                 {
+#                     "type": "text", "text": sample_prompt
+#                     },
+#                 {
+#                     "type": "image_url",
+#                     "image_url": {
+#                         "url": f"data:image/jpeg;base64,{base64_image}",
+#                         "detail": "high"
+#                         }
+#                     }
+#                 ]
+#             }
+#         ]
+
+#     response = client.chat.completions.create(
+#         model = "gpt-4o",
+#         messages = messages,
+#         max_tokens = 1500
+#         )
+
+#     print(response.choices[0].message.content)
+#     return response.choices[0].message.content
+
+# def chat_eli(query):
+#     eli5_prompt = "You have to explain the below piece of information to a five years old. \n" + query
+#     messages = [
+#         {
+#             "role": "user",
+#             "content": eli5_prompt
+#         }
+#     ]
+
+#     response = client.chat.completions.create(
+#         model="gpt-3.5-turbo",
+#         messages=messages,
+#         max_tokens=1500
+#     )
+
+#     return response.choices[0].message.content
+
+# st.title("Medical Help using Multimodal LLM")
+
+# with st.expander("About this App"):
+#     st.write("Upload an image to get an analysis from GPT-4.")
+
+# uploaded_file = st.file_uploader("Upload an Image", type=["jpg", "jpeg", "png"])
+
+# # Temporary file handling
+# if uploaded_file is not None:
+#     with tempfile.NamedTemporaryFile(delete=False, suffix=os.path.splitext(uploaded_file.name)[1]) as tmp_file:
+#         tmp_file.write(uploaded_file.getvalue())
+#         st.session_state['filename'] = tmp_file.name
+
+#     st.image(uploaded_file, caption='Uploaded Image')
+
+# # Process button
+# if st.button('Analyze Image'):
+#     if 'filename' in st.session_state and os.path.exists(st.session_state['filename']):
+#         st.session_state['result'] = call_gpt4_model_for_analysis(st.session_state['filename'])
+#         st.markdown(st.session_state['result'], unsafe_allow_html=True)
+#         os.unlink(st.session_state['filename'])  # Delete the temp file after processing
+
+# # ELI5 Explanation
+# if 'result' in st.session_state and st.session_state['result']:
+#     st.info("Below you have an option for ELI5 to understand in simpler terms.")
+#     if st.radio("ELI5 - Explain Like I'm 5", ('No', 'Yes')) == 'Yes':
+#         simplified_explanation = chat_eli(st.session_state['result'])
+#         st.markdown(simplified_explanation, unsafe_allow_html=True)
+             
+
+
+
+# from fastapi import FastAPI, File, UploadFile, Form
+# from typing import Optional
+# import requests
+# import os
+# import base64
+# from dotenv import load_dotenv
+# from openai import OpenAI
+# from PIL import Image
+# from fastapi import FastAPI, HTTPException
+# from io import BytesIO
+
+# app = FastAPI()
+
+# # Load OpenAI API Key
+# load_dotenv()
+# os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
+# client = OpenAI()
+
+
+# def process_uploaded_image(uploaded_file: UploadFile):
+#     if uploaded_file.content_type.startswith('image'):
+#         img = Image.open(uploaded_file.file)
+#         return img
+#     else:
+#         raise HTTPException(status_code=415, detail="Unsupported file format. Only images are allowed.")
+
+
+# def process_image_url(image_url: str):
+#     response = requests.get(image_url)
+#     if response.status_code == 200:
+#         img = Image.open(BytesIO(response.content))
+#         return img
+#     else:
+#         raise HTTPException(status_code=404, detail="Failed to fetch the image from the provided URL.")
+
+# # Helper function to fetch image from URL
+# def fetch_image_from_url(image_url: str):
+#     response = requests.get(image_url)
+#     if response.status_code == 200:
+#         return response.content
+#     return None
+
+# # Helper function to encode image to base64
+# def encode_image(image_bytes):
+#     return base64.b64encode(image_bytes).decode('utf-8')
+
+# # Medical Image Analysis prompt
+# medical_prompt = """You are a medical practictioner and an expert in analzying medical related images working for a very reputed hospital. You will be provided with images and you need to identify the anomalies, any disease or health issues. You need to generate the result in detailed manner. Write all the findings, next steps, recommendation, etc. You only need to respond if the image is related to a human body and health issues. You must have to answer but also write a disclaimer saying that "Consult with a Doctor before making any decisions".
+
+# Remember, if certain aspects are not clear from the image, it's okay to state 'Unable to determine based on the provided image.'
+
+# Now analyze the image and answer the above questions in the same structured manner defined above."""
+
+# # Calorie Tracking prompt
+# calorie_prompt = """
+#                     You are an expert in nutritionist where you need to see the food items from the image
+#                     and calculate the total calories, also provide the details of every food items with calories intake
+#                     is below format
+#                     1. Item 1 - no of calories
+#                     2. Item 2 - no of calories
+#                     ----
+#                     ----
+#                     After that mention that the meal is a healthy meal or not and also mention the percentage split of the ratio of
+#                     carbohydrates, proteins, fats, sugar, and calories in the meal.
+#                     Finally, give suggestions for which items should be removed and which items should be added to make the
+#                     meal healthy if it's unhealthy.
+#             """
+
+# # Endpoint for Medical Image Analysis
+# @app.post("/analyze-medical-image/")
+# async def analyze_medical_image(file: UploadFile= File(None), image_url: Optional[str] = Form(None)):
+#     image_bytes = None
+    
+#     # Check if a file was uploaded
+#     if file:
+#         image_bytes = process_uploaded_image(file)
+#     # If no file, check if URL is provided
+#     elif image_url:
+#         image_bytes = fetch_image_from_url(image_url)
+    
+#     if image_bytes is None:
+#         return {"error": "No valid image provided."}
+
+#     # Encode image to base64
+#     base64_image = encode_image(image_bytes)
+    
+#     # Call the model
+#     messages = [
+#         {
+#             "role": "user",
+#             "content": medical_prompt,
+#             "images": [
+#                 {
+#                     "type": "image_url",
+#                     "image_url": {
+#                         "url": f"data:image/jpeg;base64,{base64_image}",
+#                         "detail": "high"
+#                     }
+#                 }
+#             ]
+#         }
+#     ]
+    
+#     response = client.chat.completions.create(
+#         model="gpt-4o-mini",
+#         messages=messages,
+#         max_tokens=1500
+#     )
+
+#     return {"result": response.choices[0].message.content}
+
+# # Endpoint for Calorie Tracker
+# @app.post("/analyze-food-image/")
+# async def analyze_food_image(file: UploadFile = File(None), image_url: Optional[str] = Form(None)):
+#     image_bytes = None
+    
+#     # Check if a file was uploaded
+#     if file:
+#         image_bytes = process_uploaded_image(file)
+#     # If no file, check if URL is provided
+#     elif image_url:
+#         image_bytes = fetch_image_from_url(image_url)
+    
+#     if image_bytes is None:
+#         return {"error": "No valid image provided."}
+
+#     # Encode image to base64
+#     base64_image = encode_image(image_bytes)
+    
+#     # Call the model
+#     messages = [
+#         {
+#             "role": "user",
+#             "content": calorie_prompt,
+#             "images": [
+#                 {
+#                     "type": "image_url",
+#                     "image_url": {
+#                         "url": f"data:image/jpeg;base64,{base64_image}",
+#                         "detail": "high"
+#                     }
+#                 }
+#             ]
+#         }
+#     ]
+    
+#     response = client.chat.completions.create(
+#         model="gpt-4o-mini",
+#         messages=messages,
+#         max_tokens=1500
+#     )
+
+#     return {"result": response.choices[0].message.content}
+
+
+# from fastapi import FastAPI, File, UploadFile, Form
+# from typing import Optional
+# import requests
+# import os
+# import base64
+# from dotenv import load_dotenv
+# from openai import OpenAI
+# from PIL import Image
+# from fastapi import FastAPI, HTTPException
+# from io import BytesIO
+
+# app = FastAPI()
+
+# # Load OpenAI API Key
+# load_dotenv()
+# os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
+# client = OpenAI()
+
+
+# def process_uploaded_image(uploaded_file: UploadFile):
+#     if uploaded_file.content_type.startswith('image'):
+#         img = Image.open(uploaded_file.file)
+#         return img
+#     else:
+#         raise HTTPException(status_code=415, detail="Unsupported file format. Only images are allowed.")
+
+
+# def process_image_url(image_url: str):
+#     response = requests.get(image_url)
+#     if response.status_code == 200:
+#         img = Image.open(BytesIO(response.content))
+#         return img
+#     else:
+#         raise HTTPException(status_code=404, detail="Failed to fetch the image from the provided URL.")
+
+# # Helper function to fetch image from URL
+# def fetch_image_from_url(image_url: str):
+#     response = requests.get(image_url)
+#     if response.status_code == 200:
+#         return response.content
+#     return None
+
+# # Helper function to encode image to base64
+# def encode_image(image: Image.Image):
+#     buffered = BytesIO()
+#     image.save(buffered, format="JPEG")
+#     return base64.b64encode(buffered.getvalue()).decode('utf-8')
+
+# # Medical Image Analysis prompt
+# medical_prompt = """You are a medical practictioner and an expert in analyzing medical-related images working for a very reputed hospital. You will be provided with images and you need to identify the anomalies, any disease or health issues. You need to generate the result in detailed manner. Write all the findings, next steps, recommendations, etc. You only need to respond if the image is related to a human body and health issues. You must have to answer but also write a disclaimer saying that "Consult with a Doctor before making any decisions".
+
+# Remember, if certain aspects are not clear from the image, it's okay to state 'Unable to determine based on the provided image.'
+
+# Now analyze the image and answer the above questions in the same structured manner defined above."""
+
+# # Calorie Tracking prompt
+# calorie_prompt = """
+#                     You are an expert nutritionist where you need to see the food items from the image
+#                     and calculate the total calories. Also, provide the details of every food item with calories intake
+#                     in the below format:
+#                     1. Item 1 - no of calories
+#                     2. Item 2 - no of calories
+#                     ----
+#                     ----
+#                     After that, mention if the meal is a healthy meal or not and also mention the percentage split of the ratio of
+#                     carbohydrates, proteins, fats, sugar, and calories in the meal.
+#                     Finally, give suggestions for which items should be removed and which items should be added to make the
+#                     meal healthy if it's unhealthy.
+#             """
+
+# # Endpoint for Medical Image Analysis
+# @app.post("/analyze-medical-image/")
+# async def analyze_medical_image(file: UploadFile = File(None), image_url: Optional[str] = Form(None)):
+#     image = None
+    
+#     # Check if a file was uploaded
+#     if file:
+#         image = process_uploaded_image(file)
+#     # If no file, check if URL is provided
+#     elif image_url:
+#         image = process_image_url(image_url)
+    
+#     if image is None:
+#         return {"error": "No valid image provided."}
+
+#     # Encode image to base64
+#     base64_image = encode_image(image)
+#     print(base64_image)
+    
+#     # Call the model
+#     messages = [
+#         {
+#             "role": "user",
+#             "content": medical_prompt,
+#             "images": [
+#                 {
+#                     "type": "image_url",
+#                     "image_url": {
+#                         "url": f"data:image/jpeg;base64,{base64_image}",
+#                         "detail": "high"
+#                     }
+#                 }
+#             ]
+#         }
+#     ]
+    
+#     response = client.chat.completions.create(
+#         model="gpt-4o",
+#         messages=messages,
+#         max_tokens=1500
+#     )
+
+#     return {"result": response.choices[0].message.content}
+
+# # Endpoint for Calorie Tracker
+# @app.post("/analyze-food-image/")
+# async def analyze_food_image(file: UploadFile = File(None), image_url: Optional[str] = Form(None)):
+#     image = None
+    
+#     # Check if a file was uploaded
+#     if file:
+#         image = process_uploaded_image(file)
+#     # If no file, check if URL is provided
+#     elif image_url:
+#         image = process_image_url(image_url)
+    
+#     if image is None:
+#         return {"error": "No valid image provided."}
+
+#     # Encode image to base64
+#     base64_image = encode_image(image)
+    
+#     # Call the model
+#     messages = [
+#         {
+#             "role": "user",
+#             "content": calorie_prompt,
+#             "images": [
+#                 {
+#                     "type": "image_url",
+#                     "image_url": {
+#                         "url": f"data:image/jpeg;base64,{base64_image}",
+#                         "detail": "high"
+#                     }
+#                 }
+#             ]
+#         }
+#     ]
+    
+#     response = client.chat.completions.create(
+#         model="gpt-4o",
+#         messages=messages,
+#         max_tokens=1500
+#     )
+
+#     return {"result": response.choices[0].message.content}
 
 

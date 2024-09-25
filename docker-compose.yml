@@ -6,6 +6,7 @@ services:
     ports:
       - "8000:8000"  # For FastAPI
       - "8501:8501"  # For Streamlit
+      - "8502:8502"
     volumes:
       - .:/app
     env_file:
