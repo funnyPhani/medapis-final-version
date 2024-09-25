@@ -14,6 +14,6 @@ docker-compose up --build -d
 
 
 ```bash
-docker pull 1681149pk/medapp:allapis
-docker run -p 8000:8000 -p 8501:8501 1681149pk/medapp:allapis
+docker pull 1681149pk/medapp:srm
+docker run -p 8000:8000 -p 8501:8501 1681149pk/medapp:srm
 ```
