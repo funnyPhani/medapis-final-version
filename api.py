@@ -730,3 +730,189 @@ async def analyze_meal(image: UploadFile = File(None), image_url: str = Form(Non
 
     response_text = get_gemini_response(input_prompt, image_data)
     return {"response": response_text}
+
+
+
+###################
+def rag_system_groq3(query: str, n_results: int):
+    document_content, document_id = retrieve_document(query, n_results)
+    finalData = []
+    import google.generativeai as genai
+    import os
+    genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
+    model = genai.GenerativeModel(model_name=google_model)
+    
+    if document_id is None:
+        return "No relevant document found"
+
+    for res, doc_name in zip(document_content, document_id):
+        try:
+            response = model.generate_content(f"You are an expert in analyzing queries and their relevant context. Given the query: {query} and the context: {res}, generate a concise and accurate response. If the provided context {res} does not offer meaningful information for the query {query}, create an appropriate, concise response.")
+                
+            finalData.append({
+                "result": response.text,
+                "document_id": doc_name
+            })
+        except Exception as e:
+            return f"An error occurred: {str(e)}"
+
+    return finalData
+
+class QueryRequest(BaseModel):
+    query: str
+    n_results: int
+
+@app.post("/rag-response-gemini",tags=["Test the NHS data using RAG Approach Gemini"])
+async def get_response(request: QueryRequest):
+    try:
+        query = request.query
+        n_results = request.n_results
+        response = rag_system_groq3(query, n_results)
+        print("-" * 100)
+        print("Query:", request.query)
+        print("-" * 100)
+        print("Response:", response)
+        print("-" * 100)
+        return response
+    except Exception as e:
+        return {"error": str(e)}
+    
+
+
+class QueryRequest(BaseModel):
+    query: str
+
+@app.post("/med_qa_gemini",tags=["Medical QA using Gemini"])
+async def generate_response(request: QueryRequest):
+    try:
+        import google.generativeai as genai
+        import os
+        genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
+        model = genai.GenerativeModel(model_name=google_model)
+        response = model.generate_content(f"You are a medical advisor. Try to respond to the user query in short: {request.query}. Try to generate the response in Markdown format only.")
+        response1 = model.generate_content(f"Based on the user query: {request.query}, please generate two connected questions in a list format and do not provide a preamble.")
+        
+        
+        # updated code
+        CQ = {"connected_questions": response1.text}
+        result = {"response": response.text}
+        result.update(CQ)
+        print("-"*100)
+        print("Query:",request.query)
+        print("-"*100)
+        print("Response :", result)
+        print("-"*100)
+        
+
+        return JSONResponse(content=result)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"An error occurred: {e}")
+    
+
+class QueryRequest(BaseModel):
+    query: str
+
+@app.post("/gen_qa_gemini",tags=["Medical QA Geminis"])
+async def generate_response(request: QueryRequest):
+    try:
+        import google.generativeai as genai
+        import os
+        genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
+        model = genai.GenerativeModel(model_name=google_model)
+        response = model.generate_content(f"Please respond to the user query: {request.query} in a very concise Markdown format only.")
+        response1 = model.generate_content(f"Based on the user query: {request.query}, please generate two connected questions in a list format and do not provide a preamble.")
+        
+        
+        # updated code
+        CQ = {"connected_questions": response1.text}
+        result = {"response": response.text}
+        result.update(CQ)
+        print("-"*100)
+        print("Query:",request.query)
+        print("-"*100)
+        print("Response :", result)
+        print("-"*100)
+        
+
+        return JSONResponse(content=result)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"An error occurred: {e}")
+    
+class QueryRequests(BaseModel):
+    ds: str
+
+@app.post("/gds-gemini",tags=["Discharge summary generator using Gemini"])
+async def generate_ds(request: QueryRequests):
+    try:
+        import google.generativeai as genai
+        import os
+        genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
+        model = genai.GenerativeModel(model_name=google_model)
+        response = model.generate_content(f"""
+As a medical advisor, please review the provided discharge summary {request.ds} and extract the following key details. Present the information in the structured format below without preamble:
+
+1. **Patient Information**
+   - **Age**: [Insert patient's age]
+   - **Gender**: [Insert patient's gender]
+   - **Patient ID**: [Insert patient ID]
+
+2. **Diagnosis**
+   - **Provisional or Final**: [Insert diagnosis]
+
+3. **Patient Complaints**
+   - Insert symptoms
+   - Conditions, or concerns that led to the hospital admission
+
+4. **Past History or Past Medical History**
+   - **Chronic Conditions**: [Insert chronic conditions]
+   - **Previous Surgeries**: [Insert details of previous surgeries]
+   - **Other Relevant Health Information**: [Insert any other relevant health information]
+
+5. **Personal & Family History**
+   - **Personal History**: [Insert personal health history]
+   - **Family History**: [Insert family health history]
+
+   a. **Social History**
+      - **Lifestyle Factors**: [Insert details about lifestyle factors]
+      - **Substance Use**: [Insert information about substance use]
+
+6. **Examination Findings (Clinical findings)**
+   - **Physical Examination**: [Insert details from the physical examination]
+
+      i. **Vitals**: [Insert vital signs]
+      ii. **CVS (Cardiovascular System)**: [Insert cardiovascular system findings]
+      - **RS (Respiratory System)**: [Insert respiratory system findings]
+      - **P/A (Per Abdomen)**: [Insert abdominal examination findings]
+      - **CNS (Central Nervous System)**: [Insert central nervous system findings]
+      iii. **Local Examination**: [Insert details from any local examination, if available]
+
+7. **Investigations**
+   - **Diagnostic Tests**: [Insert results of diagnostic tests]
+
+8. **Course in the Hospital**
+   - **Treatment and Progress**: [Insert details on treatment and patient progress during the hospital stay]
+      a. **Medication Given**: [Insert list of medications administered]
+      b. **Procedure Notes & Details (For Surgery Only)**: [Insert details of any surgical procedures performed]
+      c. **Post-operative Treatment (For Surgery Only)**: [Insert details on post-operative care]
+
+9. **Discharge Advice**
+   - **General Advice**: [Insert general advice provided at discharge]
+      a. **Medication**: [Insert medication instructions at discharge]
+      b. **Follow-up Details**: [Insert follow-up appointments or instructions]
+         i. **Ward Number**: [Insert ward number]
+         ii. **Ambulance Number**: [Insert ambulance number, if applicable]
+
+Please ensure that all extracted information is presented clearly and accurately according to the details in the discharge summary.
+                    """)
+        
+               
+        print("-" * 100)
+        print("Discharge Summary:", request.ds)
+        print("-" * 100)
+        print("Response:", response.text)
+        print("-" * 100)
+        
+        return JSONResponse(content={"response": response.text})
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"An error occurred: {e}")
+    

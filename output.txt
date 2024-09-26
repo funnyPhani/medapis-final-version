@@ -1,0 +1,1030 @@
+Couldn't find '/root/.ollama/id_ed25519'. Generating new private key.
+Your new public key is: 
+
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDsQT1K4nrlpTwxr2ndSCH8NEgBLFNahhA6QjF94qy05
+
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8502
+  Network URL: http://172.17.0.2:8502
+  External URL: http://182.72.201.8:8502
+
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://172.17.0.2:8501
+  External URL: http://182.72.201.8:8501
+
+[GIN] 2024/09/25 - 08:42:57 | 200 |      31.002µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2024/09/25 - 08:43:46 | 200 | 49.244103054s |       127.0.0.1 | POST     "/api/pull"
+[GIN] 2024/09/25 - 08:43:46 | 200 |      20.502µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2024/09/25 - 08:44:47 | 200 |          1m1s |       127.0.0.1 | POST     "/api/pull"
+[GIN] 2024/09/25 - 08:44:47 | 200 |      33.702µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2024/09/25 - 08:44:47 | 404 |     222.612µs |       127.0.0.1 | POST     "/api/show"
+[GIN] 2024/09/25 - 08:49:19 | 200 |         4m31s |       127.0.0.1 | POST     "/api/pull"
+[GIN] 2024/09/25 - 08:49:19 | 200 |    5.562242ms |       127.0.0.1 | POST     "/api/show"
+INFO [main] build info | build=1 commit="8962422" tid="139717094211776" timestamp=1727254159
+INFO [main] system info | n_threads=8 n_threads_batch=8 system_info="AVX = 1 | AVX_VNNI = 0 | AVX2 = 1 | AVX512 = 0 | AVX512_VBMI = 0 | AVX512_VNNI = 0 | AVX512_BF16 = 0 | FMA = 1 | NEON = 0 | SVE = 0 | ARM_FMA = 0 | F16C = 1 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 0 | SSE3 = 1 | SSSE3 = 1 | VSX = 0 | MATMUL_INT8 = 0 | LLAMAFILE = 1 | " tid="139717094211776" timestamp=1727254159 total_threads=16
+INFO [main] HTTP server listening | hostname="127.0.0.1" n_threads_http="15" port="39931" tid="139717094211776" timestamp=1727254159
+INFO [main] model loaded | tid="139717094211776" timestamp=1727254163
+[GIN] 2024/09/25 - 08:49:23 | 200 |  3.783731622s |       127.0.0.1 | POST     "/api/generate"
+LLM Model Name: qwen2.5:1.5b
+Embedding Model Name: mxbai-embed-large
+groq_model Name: llama-3.1-70b-versatile
+google_model Name: gemini-1.5-flash
+ollama_vision_model Name: llava:latest
+[GIN] 2024/09/25 - 08:51:52 | 200 |         1m46s |       127.0.0.1 | POST     "/api/chat"
+--------------------------------------------------------------------------------
+--------------------
+{
+    'result': " **Disclaimer**: The following analysis is based on the visual 
+information provided in the image and does not constitute medical advice. Always
+consult with a healthcare professional for accurate diagnosis and 
+treatment.\n\nThe image shows an individual with skin blemishes or spots that 
+could be indicative of several conditions. However, without additional context 
+or information about the person's symptoms and medical history, it is difficult 
+to make a definitive diagnosis from the image alone.\n\nHere are some 
+observations based on the visible skin lesions:\n\n- The skin appears to have 
+multiple blemishes or spots that may be indicative of acne, psoriasis, fungal 
+infections, or other dermatological conditions.\n- The distribution and 
+characteristics of the lesions vary, which could suggest different types of skin
+issues.\n\n**Recommendations and Next Steps**:\n1. **Consult a Dermatologist**: 
+Given the complexity of skin conditions and the possibility of multiple 
+diagnoses, it is advisable to consult with a dermatologist for an accurate 
+diagnosis and treatment plan.\n2. **Careful Observation**: Monitor the condition
+of the skin lesions over time to observe any changes that may help in 
+determining the nature of the skin issues.\n3. **Skincare Routine**: Maintain a 
+consistent skincare routine as recommended by a dermatologist, including 
+cleansing, moisturizing, and potential use of topical treatments or medications 
+as prescribed.\n4. **Healthy Lifestyle**: Support the skin's health with a 
+balanced diet, regular exercise, and adequate sleep to promote overall 
+well-being.\n\n**Note on the Image Quality**: The image resolution is low, 
+making it difficult to discern finer details that could be useful in diagnosing 
+or treating the condition of the skin lesions. Higher-quality images might be 
+necessary for more detailed analysis.\n\nIf you have any concerns or questions 
+about this image, please consult a healthcare professional for further guidance.
+"
+}
+--------------------------------------------------------------------------------
+--------------------
+INFO:     172.17.0.1:52884 - "POST /analyze-medical-image HTTP/1.1" 200 OK
+INFO [main] build info | build=1 commit="8962422" tid="140489335382208" timestamp=1727254312
+INFO [main] system info | n_threads=8 n_threads_batch=8 system_info="AVX = 1 | AVX_VNNI = 0 | AVX2 = 1 | AVX512 = 0 | AVX512_VBMI = 0 | AVX512_VNNI = 0 | AVX512_BF16 = 0 | FMA = 1 | NEON = 0 | SVE = 0 | ARM_FMA = 0 | F16C = 1 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 0 | SSE3 = 1 | SSSE3 = 1 | VSX = 0 | MATMUL_INT8 = 0 | LLAMAFILE = 1 | " tid="140489335382208" timestamp=1727254312 total_threads=16
+INFO [main] HTTP server listening | hostname="127.0.0.1" n_threads_http="15" port="44271" tid="140489335382208" timestamp=1727254312
+INFO [main] model loaded | tid="140489335382208" timestamp=1727254313
+[GIN] 2024/09/25 - 08:51:53 | 200 |  1.058153351s |       127.0.0.1 | POST     "/api/embeddings"
+--------------------------------------------------------------------------------
+--------------------
+Query: factors for belly fat and how to prevent it?
+--------------------------------------------------------------------------------
+--------------------
+Response:
+[
+    {
+        'result': 'Based on the provided context, there is no direct information
+regarding the factors for belly fat or how to prevent it. However, I can provide
+you with some general advice.\n\nBeing overweight or obese, particularly having 
+a lot of fat around the waist (an "apple-like" body shape), is mentioned as a 
+risk factor for Non-Alcoholic Fatty Liver Disease (NAFLD). To prevent or reduce 
+belly fat, it\'s essential to adopt a healthy lifestyle, including:\n\n1.  
+**Maintaining a healthy weight**: Aim for a BMI of 18.5 to 24.9 by losing weight
+if needed.\n2.  **Eating a balanced diet**: Focus on consuming high amounts of 
+fruits, vegetables, protein, and carbohydrates, but low in fat, sugar, and 
+salt.\n3.  **Exercising regularly**: Perform at least 150 minutes of 
+moderate-intensity activity per week, such as walking or cycling.\n4.  
+**Drinking plenty of water**: Limit sweet drinks and opt for water 
+instead.\n\nAdditionally, quitting smoking can also help reduce the risk of 
+health problems.\n\nRemember to consult a healthcare professional for 
+personalized advice and guidance on maintaining a healthy lifestyle and managing
+belly fat.',
+        'document_id': 'non-alcoholic-fatty-liver-disease.md'
+    },
+    {
+        'result': 'The provided context does not offer meaningful information 
+regarding the query "factors for belly fat and how to prevent it." However, I 
+can provide a general response based on common knowledge.\n\n Factors that 
+contribute to belly fat include:\n\n1. Genetics: Some people may be more prone 
+to storing fat around their midsection due to their genetic makeup.\n2. 
+Lifestyle habits: A sedentary lifestyle, poor diet, and irregular physical 
+activity can contribute to weight gain and belly fat.\n3. Hormonal imbalances: 
+Hormonal changes, such as those experienced during menopause or pregnancy, can 
+affect fat distribution and storage.\n4. Stress: Chronic stress can lead to 
+increased cortisol levels, which can contribute to belly fat storage.\n5. Poor 
+sleep: Lack of quality sleep can disrupt hormones that regulate appetite and 
+metabolism, leading to weight gain and belly fat.\n\nTo prevent belly fat, 
+consider the following:\n\n1. Eat a balanced diet: Focus on whole, 
+nutrient-dense foods, including fruits, vegetables, whole grains, lean proteins,
+and healthy fats.\n2. Engage in regular physical activity: Aim for at least 150 
+minutes of moderate-intensity aerobic exercise, or 75 minutes of 
+vigorous-intensity aerobic exercise, or a combination of both, per week.\n3. 
+Incorporate strength training: Resistance exercises can help build muscle mass 
+and boost metabolism, which can help reduce belly fat.\n4. Manage stress: 
+Practice stress-reducing techniques, such as meditation, yoga, or deep breathing
+exercises.\n5. Get enough sleep: Aim for 7-9 hours of sleep per night to support
+hormone regulation and metabolism.\n\nIf you\'re concerned about belly fat or 
+would like more specific guidance, consider consulting a healthcare professional
+or a registered dietitian for personalized advice.',
+        'document_id': 'stretch-marks.md'
+    }
+]
+--------------------------------------------------------------------------------
+--------------------
+INFO:     172.17.0.1:50672 - "POST /rag-response HTTP/1.1" 200 OK
+INFO [main] build info | build=1 commit="8962422" tid="139699297022144" timestamp=1727254322
+INFO [main] system info | n_threads=8 n_threads_batch=8 system_info="AVX = 1 | AVX_VNNI = 0 | AVX2 = 1 | AVX512 = 0 | AVX512_VBMI = 0 | AVX512_VNNI = 0 | AVX512_BF16 = 0 | FMA = 1 | NEON = 0 | SVE = 0 | ARM_FMA = 0 | F16C = 1 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 0 | SSE3 = 1 | SSSE3 = 1 | VSX = 0 | MATMUL_INT8 = 0 | LLAMAFILE = 1 | " tid="139699297022144" timestamp=1727254322 total_threads=16
+INFO [main] HTTP server listening | hostname="127.0.0.1" n_threads_http="15" port="43167" tid="139699297022144" timestamp=1727254322
+INFO [main] model loaded | tid="139699297022144" timestamp=1727254325
+[GIN] 2024/09/25 - 08:52:15 | 200 | 13.274842098s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2024/09/25 - 08:52:17 | 200 |  1.963071841s |       127.0.0.1 | POST     "/api/chat"
+--------------------------------------------------------------------------------
+--------------------
+Query: what are the factor of fatty liver.
+--------------------------------------------------------------------------------
+--------------------
+Response :
+{
+    'response': '```markdown\nFatty liver is primarily influenced by several 
+factors:\n\n1. **Obesity**: Excess body fat, particularly around the abdomen, 
+can lead to non-alcoholic steatohepatitis (NASH), which causes liver cells to 
+store more fat.\n2. **Diabetes Mellitus**: High blood sugar levels contribute to
+fatty liver disease as they impair insulin function and cause inflammation in 
+the liver.\n3. **High Fat Diet**: Consumption of foods high in saturated fats 
+and cholesterol can increase fat accumulation in the liver, leading to 
+non-alcoholic steatohepatitis.\n4. **Infection with Hepatitis Viruses**: Certain
+viral infections like hepatitis B or C are associated with an increased risk of 
+developing fatty liver disease.\n5. **Alcohol Abuse**: Long-term heavy drinking 
+is a significant factor in the development of alcoholic liver diseases, 
+including fatty liver.\n\nThese factors can interact and exacerbate each other, 
+contributing to more severe forms of liver damage such as NASH (non-alcoholic 
+steatohepatitis) or cirrhosis. Lifestyle changes, dietary modifications, and 
+medical interventions are key approaches in managing fatty liver disease.\n```',
+    'connected_questions': '1. What biological factors contribute to the 
+development of fatty liver?\n2. How does genetics play a role in predisposing 
+individuals to develop fatty liver disease?'
+}
+--------------------------------------------------------------------------------
+--------------------
+INFO:     172.17.0.1:60310 - "POST /medqa HTTP/1.1" 200 OK
+[GIN] 2024/09/25 - 08:52:57 | 200 | 39.467820693s |       127.0.0.1 | POST     "/api/chat"
+--------------------------------------------------------------------------------
+--------------------
+Discharge Summary: IP No: 2457662  UHID No: 3504080  Gender: Male  Age: 60Y   
+Discharge Summary: DATE AND TIME OF ARIVAL: 3/8/24 AND 11.55PM CONSULTANT NAME: 
+DR.RAJAKALI TYPE OF DISCHARGE: AT REQUEST MLC/NMLC: NMLC AR.NO: - HR: 108 /Min 
+BP: 130/90 mmHg R/R: 25 /MIN SPO2: 97 % TEMP:99.2 &deg F CBG: 228 mg/dl FOCUSED 
+HISTORY: A 60 YEAR OLD MALE K/C/O T2DM / SHTN WAS BROUGHT TO ER WITH COMPLAINTS 
+OF VOMITING ( 2 EPISODES ) AROUND 7 PM AND 10:30 PM CONTAINS FOOD PARTICLE ,NON 
+BILIOUS , NON BLOOD STAINED , NO H/O CHEST PAIN / PALPITATION / SWEATING H/O 
+CONSUMPTION OF ALCOHOL + NO H/O BREATHING DIFFICULTY NO H/O FEVER / COUGH 
+PATIENT INITIALLY WENT TO OUTSIDE HOSPITAL , ECG TAKEN , AND REFFERED HERE FOR 
+FURTHER MANAGEMENT CLINICAL DETAILS: K/C/O DM AND SHTN X 10 YEARS PHYSICAL 
+FINDINGS: CVS:S1S2+ , NO MURMUR RS:BLAE+ , NO ADDED SOUND P/A:SOFT , NON TENDER 
+, BS+ CNS:NFND SIGNIFICANT INVESTIGATION RESULT: ECG: ST INVERSION V4-V6, I 
+,aVL-T WAVE INVERSION MEDICATIONS GIVEN: INJ PAN 40 mg IV INJ.ONDANSERTON 4 MG 
+IV INJ.THIAMINE 200 MG IV COURSE IN THE HOSPITAL : PATIENT CAME TO THE HOSPITAL 
+WITH ABOVE MENTIONED COMPLAINTS. ALL THE BASELINE INVESTIGATION WERE DONE . ECG 
+WAS DONE .TROP I SHOWED NEGATIVE MEDICINE OPINION WAS OBTAINED .PATIENT ADVISED 
+FOR ADMISSION AND INFORMED ABOUT THE PATIENTS CONDITION FOR FUTHER EVALUATION 
+,PATIENT NOT WILLING FOR ADMISSION ,HENCE DISCHARGED AT REQUEST. PROVISIONAL 
+DIAGNOSIS: ALCOHOLIC GASTRITIS CONDITION AT DISCHARGE: IMPROVED IN Emergency 
+contact Phone No.
+--------------------------------------------------------------------------------
+--------------------
+Response: | **Patient Information** | 
+|------------------------|
+| Age: 60Y               |
+| Gender: Male           |
+
+| **Diagnosis**          | Alcoholic Gastroenteritis                      |
+|-------------------------|
+| Provisional or Final    |
+
+| **Patient Complaints** | Vomiting, 2 episodes around 7 PM and 10:30 PM with 
+non-bilious, non-blood-stained food particles; no history of chest pain, 
+palpitation, sweating, fever, cough, or breathing difficulties. Patient 
+initially went to an outside hospital, ECG taken, and referred here for further 
+management. |
+|-------------------------|
+
+| **Past History/Previous Medical History** | Chronic Type 2 Diabetes Mellitus 
+(T2DM) with history of surgery: SHTN (not specified). No history of alcohol 
+consumption or any other chronic condition.    |
+|-------------------------------------------|
+| **Personal & Family History**           | None applicable as no personal and 
+family health information is provided, except for the patient's age being 60 
+years old. |
+| **Lifestyle Factors**:                   | None provided                      
+|
+| **Substance Use**:                       | Alcohol consumption + No history of
+drug use.   |
+
+| **Examination Findings (Clinical findings)**       | Physical examination 
+details not provided in the discharge summary. Patient’s vital signs, 
+cardiovascular system, respiratory system, abdomen, and central nervous system 
+were noted but not described in detail.
+|
+| **Investigations**                           | All baseline investigations 
+performed, ECG done, troponin test negative, medication prescribed: INJ PAN 40 
+mg IV, INJ ONDANSERTON 4 MG IV, THIAMINE 200 MG IV. No other specific 
+investigations noted in the summary |
+|
+| **Course in the Hospital**                   | Patient came to hospital with 
+complaints of vomiting for two episodes around 7 PM and 10:30 PM; all baseline 
+investigations were done. ECG was taken, and patient was referred here for 
+further management. Medications given: INJ PAN 40 mg IV, INJ ONDANSERTON 4 MG 
+IV, THIAMINE 200 MG IV. The patient was advised to admit and informed about 
+their condition for future evaluation; patient did not want admission, hence 
+discharged at request. |
+|
+| **Discharge Advice**                         | No specific discharge advice 
+provided in the summary |
+
+Please note that all details were extracted based on the available information 
+from the discharge summary provided.
+--------------------------------------------------------------------------------
+--------------------
+INFO:     172.17.0.1:60316 - "POST /dsg HTTP/1.1" 200 OK
+--------------------------------------------------------------------------------
+--------------------
+Discharge Summary: IP No: 2457662  UHID No: 3504080  Gender: Male  Age: 60Y   
+Discharge Summary: DATE AND TIME OF ARIVAL: 3/8/24 AND 11.55PM CONSULTANT NAME: 
+DR.RAJAKALI TYPE OF DISCHARGE: AT REQUEST MLC/NMLC: NMLC AR.NO: - HR: 108 /Min 
+BP: 130/90 mmHg R/R: 25 /MIN SPO2: 97 % TEMP:99.2 &deg F CBG: 228 mg/dl FOCUSED 
+HISTORY: A 60 YEAR OLD MALE K/C/O T2DM / SHTN WAS BROUGHT TO ER WITH COMPLAINTS 
+OF VOMITING ( 2 EPISODES ) AROUND 7 PM AND 10:30 PM CONTAINS FOOD PARTICLE ,NON 
+BILIOUS , NON BLOOD STAINED , NO H/O CHEST PAIN / PALPITATION / SWEATING H/O 
+CONSUMPTION OF ALCOHOL + NO H/O BREATHING DIFFICULTY NO H/O FEVER / COUGH 
+PATIENT INITIALLY WENT TO OUTSIDE HOSPITAL , ECG TAKEN , AND REFFERED HERE FOR 
+FURTHER MANAGEMENT CLINICAL DETAILS: K/C/O DM AND SHTN X 10 YEARS PHYSICAL 
+FINDINGS: CVS:S1S2+ , NO MURMUR RS:BLAE+ , NO ADDED SOUND P/A:SOFT , NON TENDER 
+, BS+ CNS:NFND SIGNIFICANT INVESTIGATION RESULT: ECG: ST INVERSION V4-V6, I 
+,aVL-T WAVE INVERSION MEDICATIONS GIVEN: INJ PAN 40 mg IV INJ.ONDANSERTON 4 MG 
+IV INJ.THIAMINE 200 MG IV COURSE IN THE HOSPITAL : PATIENT CAME TO THE HOSPITAL 
+WITH ABOVE MENTIONED COMPLAINTS. ALL THE BASELINE INVESTIGATION WERE DONE . ECG 
+WAS DONE .TROP I SHOWED NEGATIVE MEDICINE OPINION WAS OBTAINED .PATIENT ADVISED 
+FOR ADMISSION AND INFORMED ABOUT THE PATIENTS CONDITION FOR FUTHER EVALUATION 
+,PATIENT NOT WILLING FOR ADMISSION ,HENCE DISCHARGED AT REQUEST. PROVISIONAL 
+DIAGNOSIS: ALCOHOLIC GASTRITIS CONDITION AT DISCHARGE: IMPROVED IN Emergency 
+contact Phone No.
+--------------------------------------------------------------------------------
+--------------------
+Response: 1. **Patient Information**
+   - **Age**: 60 years
+   - **Gender**: Male
+   - **Patient ID**: IP No: 2457662, UHID No: 3504080
+
+2. **Diagnosis**
+   - **Provisional or Final**: Provisional diagnosis of Alcoholic Gastritis
+
+3. **Patient Complaints**
+   - Vomiting (2 episodes) around 7 pm and 10:30 pm, contains food particles, 
+non-bilious, non-blood stained
+   - No complaints of chest pain, palpitation, sweating, breathing difficulty, 
+fever, or cough
+
+4. **Past History or Past Medical History**
+   - **Chronic Conditions**: Type 2 Diabetes Mellitus (T2DM) and Systemic 
+Hypertension (SHTN) x 10 years
+   - **Previous Surgeries**: No information provided
+   - **Other Relevant Health Information**: No other information provided
+
+5. **Personal & Family History**
+   - **Personal History**: No information provided
+   - **Family History**: No information provided
+
+   a. **Social History**
+      - **Lifestyle Factors**: No information provided
+      - **Substance Use**: History of alcohol consumption
+
+6. **Examination Findings (Clinical findings)**
+   - **Physical Examination**: 
+      i. **Vitals**: 
+         - Pulse: 108/min
+         - Blood pressure: 130/90 mmHg
+         - Respiratory rate: 25/min
+         - Oxygen saturation: 97%
+         - Temperature: 99.2°F
+      ii. **CVS (Cardiovascular System)**: S1S2+ , No murmur
+      ii. **RS (Respiratory System)**: Bilateral Lung expansion + , No added 
+sound
+      iii. **P/A (Per Abdomen)**: Soft , non tender , BS+
+      iv. **CNS (Central Nervous System)**: Normal findings seen
+
+7. **Investigations**
+   - **Diagnostic Tests**: 
+      - ECG: ST inversion V4-V6, I , aVL-T wave inversion
+
+8. **Course in the Hospital**
+   - **Treatment and Progress**: 
+      a. **Medication Given**: 
+         - Inj Pan 40 mg IV
+         - Inj Ondanserton 4 mg IV
+         - Inj Thiamine 200 mg IV
+      b. **Procedure Notes & Details (For Surgery Only)**: Not applicable
+      c. **Post-operative Treatment (For Surgery Only)**: Not applicable
+
+9. **Discharge Advice**
+   - **General Advice**: Patient was advised for admission and further 
+evaluation but discharged at request as the patient was not willing for 
+admission
+      a. **Medication**: Information not provided
+      b. **Follow-up Details**: Information not provided
+         i. **Ward Number**: Information not provided
+         ii. **Ambulance Number**: Information not provided
+--------------------------------------------------------------------------------
+--------------------
+INFO:     172.17.0.1:39266 - "POST /gds HTTP/1.1" 200 OK
+[GIN] 2024/09/25 - 08:53:06 | 200 |  5.097088982s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2024/09/25 - 08:53:08 | 200 |  2.246653608s |       127.0.0.1 | POST     "/api/chat"
+--------------------------------------------------------------------------------
+--------------------
+Query: what is Allen Turing award? who got it. 
+--------------------------------------------------------------------------------
+--------------------
+Response :
+{
+    'response': "The [Allan Turing 
+Award](https://awards.sigact.org/allen-turing-award) is given annually by the 
+Association for Computing Machinery (ACM). It's considered one of the highest 
+honors in computing, awarded to individuals who have made significant 
+contributions to computer science and its applications. As of 2023, the award 
+has been presented only once since it was first established in 1976, which is 
+attributed to Professor John von Neumann for his work on artificial intelligence
+and digital computers during World War II.",
+    'connected_questions': '1. What were the criteria for receiving the 2023 
+ACM-IEEE Award?\n  2. Who received the 2023 IEEE Computer Society Technical 
+Achievement Awards?'
+}
+--------------------------------------------------------------------------------
+--------------------
+INFO:     172.17.0.1:57958 - "POST /qa HTTP/1.1" 200 OK
+[GIN] 2024/09/25 - 08:54:01 | 200 | 53.183214167s |       127.0.0.1 | POST     "/api/chat"
+--------------------------------------------------------------------------------
+--------------------
+{
+    'result': ' Unable to determine any anomalies, diseases, or health issues in
+the image as it is of low resolution and lacks context. To make an accurate 
+diagnosis, a clearer image with more information would be needed. Consult with a
+doctor before making any decisions based on this analysis. '
+}
+--------------------------------------------------------------------------------
+--------------------
+INFO:     172.17.0.1:57982 - "POST /analyze-medical-image HTTP/1.1" 200 OK
+--------------------------------------------------------------------------------
+--------------------
+Discharge Summary: IP No: 2457662  UHID No: 3504080  Gender: Male  Age: 60Y   
+Discharge Summary: DATE AND TIME OF ARIVAL: 3/8/24 AND 11.55PM CONSULTANT NAME: 
+DR.RAJAKALI TYPE OF DISCHARGE: AT REQUEST MLC/NMLC: NMLC AR.NO: - HR: 108 /Min 
+BP: 130/90 mmHg R/R: 25 /MIN SPO2: 97 % TEMP:99.2 &deg F CBG: 228 mg/dl FOCUSED 
+HISTORY: A 60 YEAR OLD MALE K/C/O T2DM / SHTN WAS BROUGHT TO ER WITH COMPLAINTS 
+OF VOMITING ( 2 EPISODES ) AROUND 7 PM AND 10:30 PM CONTAINS FOOD PARTICLE ,NON 
+BILIOUS , NON BLOOD STAINED , NO H/O CHEST PAIN / PALPITATION / SWEATING H/O 
+CONSUMPTION OF ALCOHOL + NO H/O BREATHING DIFFICULTY NO H/O FEVER / COUGH 
+PATIENT INITIALLY WENT TO OUTSIDE HOSPITAL , ECG TAKEN , AND REFFERED HERE FOR 
+FURTHER MANAGEMENT CLINICAL DETAILS: K/C/O DM AND SHTN X 10 YEARS PHYSICAL 
+FINDINGS: CVS:S1S2+ , NO MURMUR RS:BLAE+ , NO ADDED SOUND P/A:SOFT , NON TENDER 
+, BS+ CNS:NFND SIGNIFICANT INVESTIGATION RESULT: ECG: ST INVERSION V4-V6, I 
+,aVL-T WAVE INVERSION MEDICATIONS GIVEN: INJ PAN 40 mg IV INJ.ONDANSERTON 4 MG 
+IV INJ.THIAMINE 200 MG IV COURSE IN THE HOSPITAL : PATIENT CAME TO THE HOSPITAL 
+WITH ABOVE MENTIONED COMPLAINTS. ALL THE BASELINE INVESTIGATION WERE DONE . ECG 
+WAS DONE .TROP I SHOWED NEGATIVE MEDICINE OPINION WAS OBTAINED .PATIENT ADVISED 
+FOR ADMISSION AND INFORMED ABOUT THE PATIENTS CONDITION FOR FUTHER EVALUATION 
+,PATIENT NOT WILLING FOR ADMISSION ,HENCE DISCHARGED AT REQUEST. PROVISIONAL 
+DIAGNOSIS: ALCOHOLIC GASTRITIS CONDITION AT DISCHARGE: IMPROVED IN Emergency 
+contact Phone No.
+--------------------------------------------------------------------------------
+--------------------
+Response: 1. **Patient Information**
+   - **Age**: 60 years
+   - **Gender**: Male
+   - **Patient ID**: IP No: 2457662, UHID No: 3504080
+
+2. **Diagnosis**
+   - **Provisional or Final**: Provisional
+   - **Diagnosis**: Alcoholic Gastritis
+
+3. **Patient Complaints**
+   - Symptoms: Vomiting (2 episodes) around 7 PM and 10:30 PM, contains food 
+particles, non-bilious, non-blood stained
+   - Conditions or concerns: No H/O Chest pain/palpitation/sweating, No H/O 
+breathing difficulty, No H/O fever/cough
+
+4. **Past History or Past Medical History**
+   - **Chronic Conditions**: Type 2 Diabetes Mellitus (T2DM), Systemic 
+Hypertension (SHTN) x 10 years
+   - **Other Relevant Health Information**: Consumed alcohol (Alcohol +)
+
+5. **Personal & Family History**
+
+   a. **Social History**
+      - **Lifestyle Factors**: Not mentioned
+      - **Substance Use**: Consumed alcohol (Alcohol +)
+
+6. **Examination Findings (Clinical findings)**
+   - **Physical Examination**
+      i. **Vitals**: 
+         - HR: 108/min
+         - BP: 130/90 mmHg
+         - R/R: 25/min
+         - SPO2: 97%
+         - Temp: 99.2°F
+      ii. **CVS (Cardiovascular System)**: S1S2+, No murmur
+      iii. **RS (Respiratory System)**: BLA (Bilateral air entry) +, No added 
+sound
+      iv. **P/A (Per Abdomen)**: Soft, Non tender, BS+
+      v. **CNS (Central Nervous System)**: NFND (No focal neurological deficit)
+      vi. **Local Examination**: Not mentioned
+
+7. **Investigations**
+   - **Diagnostic Tests**:
+      - ECG: ST inversion V4-V6, I, aVL- T wave inversion
+      - Trop I: Negative
+      (Baseline investigations were done but not all the results are mentioned)
+
+8. **Course in the Hospital**
+   - **Treatment and Progress**: The patient came to the hospital with 
+complaints of vomiting (2 episodes) and was advised for admission but was not 
+willing for the same.
+   a. **Medication Given**:
+      - INJ PAN 40 mg IV
+      - INJ ONDANSETRON 4 MG IV
+      - INJ THIAMINE 200 MG IV
+
+9. **Discharge Advice**
+   - **General Advice**: Not mentioned
+   a. **Follow-up Details**: Not mentioned
+--------------------------------------------------------------------------------
+--------------------
+INFO:     172.17.0.1:37846 - "POST /gds HTTP/1.1" 200 OK
+--------------------------------------------------------------------------------
+--------------------
+Discharge Summary: IP No: 2457339  UHID No: 3502408  Gender: Female  Age: 50Y   
+Discharge Summary: DIAGNOSIS : ACUTE CALCULOUS CHOLECYSTITIS TYPE 2 DIABETES 
+MELLITUS SYSTEMIC HYPERTENSION HISTORY: PATIENT CAME WITH C/O SEVERE RIGHT SIDED
+UPPER ABDOMINAL PAIN X 1 DAY C/O FEVER X 1 DAY C/O VOMITING ( 3 EPISODES)  FOOD 
+CONTENT NO H/O ABDOMINAL DISTENSION NO H/O CONSTIPATION NO OTHER COMPLAINTS PAST
+MEDICAL H/O: SIMILAR COMPLAINTS 2 MONTHS BACK AND WAS TREATED CONSERVATIVELY AND
+ADVISED USG ABDOMEN BUT PATIENT NOT TAKEN K/C/O T2DM ON TREATMENT K/C/O S.HTN ON
+TREATMENT N/K/C/O BRONCHIAL ASTHMA, EPILEPSY, TUBERCULOSIS. PAST SURGICAL 
+HISTORY: LSCS X 21 YEARS BACK PERSONAL HISTORY: MIXED DIET NORMAL SLEEP PATTERN 
+NORMAL BOWEL AND BLADDER HABITS FAMILY H/O: NIL SIGNIFICANT MENSTRUAL H/O: POST 
+MENOPAUSAL SINCE 3 YEARS PHYSICAL FINDINGS: G/E: GC - FAIR. PATIENT CONSCIOUS, 
+ALERT AND ORIENTED. BP: 170/90 MMHG PR: 90/MIN TEMP: 101 DEGREE F CBG: 123 Mg/dl
+S/E: CVS: S1S2(+) RS: BAE (+) CNS: B/L PERL (+) P/A: SOFT, BS+ RIGHT 
+HYPOCHONDRIUM TENDERNESS NO GUARDING OR RIGIDITY NO DISTENSION INVESTIGATIONS: 
+INVESTIGATIONS ENCLOSED WITHIN THE FILES. USG ABDOMEN ( 1/8/2024: DONE OUTSIDE )
+GALL BLADDER: CALCULI MEASURING 12 MM NOTED IN LUMEN IN NECK REGION ECHOGENIC 
+SLUDGE NOTED IN THE LUMEN. MILD DIFFUSWE WALL THICKENING NOTED , MEASURING 3.4 
+MM COURSE IN THE HOSPITAL : PATIENT CAME WITH ABOVE MENTIONED COMPLAINTS .ALL 
+BASELINE INVESTIGATIONS WERE DONE .SGE OPINION OBTAINED AND ORDERS FOLLOWED . 
+PATIENT MANAGED CONSERVATIVELY, DUE TO PERSONAL LOGISTICAL REASONS PATIENT WANTS
+TO DISCHARGE AGAINST MEDICAL ADVICE. HENCE PATIENT IS BEING DISCHARGED 
+TREATMENT: INJ. METRONIDAZOLE 500 MG IV 1-1-1 INJ.TRAMADOL 100 MG IN 100 ML NS 
+1-0-1 INJ.EMESET 4 MG IV 1-0-1 INJ.VITAMIN K 1 AMP 1-0-0 T.GLYCOMET GP 1 1-0-0 
+T.PROLOMET XL 25 MG 1-0-1 REVIEW IN GS V OPD SOS CONTACT DETAILS : 1. WARD 
+NUMBER: 044 4743 2416 2. AMBULANCE NUMBER : 9791938637
+--------------------------------------------------------------------------------
+--------------------
+Response: 1. **Patient Information**
+   - **Age**: 50 years
+   - **Gender**: Female
+   - **Patient ID**: IP No: 2457339, UHID No: 3502408
+
+2. **Diagnosis**
+   - **Provisional or Final**: Final
+   - Diagnosis: Acute Calculous Cholecystitis, Type 2 Diabetes Mellitus, 
+Systemic Hypertension
+
+3. **Patient Complaints**
+   - Severe right-sided upper abdominal pain for 1 day
+   - Fever for 1 day
+   - Vomiting (3 episodes) with food content
+
+4. **Past History or Past Medical History**
+   - **Chronic Conditions**: Type 2 Diabetes Mellitus (on treatment), Systemic 
+Hypertension (on treatment)
+   - **Previous Surgeries**: LSCS (Lower Segment Caesarean Section) 21 years 
+back
+   - **Other Relevant Health Information**: Similar complaints 2 months back and
+treated conservatively, not known to have bronchial asthma, epilepsy, or 
+tuberculosis.
+
+5. **Personal & Family History**
+   - **Personal History**: Post-menopausal since 3 years
+   - **Family History**: Nil significant
+
+   a. **Social History**
+      - **Lifestyle Factors**: Mixed diet, normal sleep pattern
+      - **Substance Use**: Not mentioned
+
+6. **Examination Findings (Clinical findings)**
+   - **Physical Examination**: General Condition - Fair. Patient conscious, 
+alert, and oriented.
+
+      i. **Vitals**: 
+         - BP: 170/90 mmHg
+         - PR: 90/min
+         - Temp: 101°F (38.3°C)
+         - CBG (Capillary Blood Glucose): 123 mg/dl
+      ii. **CVS (Cardiovascular System)**: S1, S2 (+)
+      - **RS (Respiratory System)**: BAE (+)
+      - **P/A (Per Abdomen)**: Soft, Bowel Sounds present (+), Right 
+hypochondrium tenderness, No guarding or rigidity, No distension
+      iii. **CNS (Central Nervous System)**: Both Pupils Equally Reactive to 
+Light (+)
+
+      iv. **Local Examination**: Not mentioned
+
+7. **Investigations**
+   - **Diagnostic Tests**: Ultrasound abdomen (done outside on 01-08-2024) 
+      - Gall bladder: Calculi measuring 12 mm in lumen of neck region
+      - Echogenic sludge in the lumen
+      - Mild diffuse wall thickening (3.4 mm)
+
+8. **Course in the Hospital**
+   - **Treatment and Progress**: Managed conservatively due to the patient's 
+personal and logistical reasons.
+
+      a. **Medication Given**: 
+         - Inj. Metronidazole 500 mg IV 1-0-1 (1-0-1 indicates: 1 dose in the 
+morning, 0 doses at noon, 1 dose at night)
+         - Inj. Tramadol 100 mg in 100 ml NS 1-0-1
+         - Inj. Emeset 4 mg IV 1-0-1
+         - Inj. Vitamin K 1 amp 1-0-0
+         - T.Glycomet GP 1 1-0-0
+         - T. Prolomet XL 25 mg 1-0-1
+
+9. **Discharge Advice**
+   - **General Advice**: Patient wants to discharge against medical advice.
+
+      a. **Medication**: Continue medications at home.
+
+      b. **Follow-up Details**:
+         - Review in General Surgery OPD
+         - SOS Contact: 
+            i. **Ward Number**: 044 4743 2416
+            ii. **Ambulance Number**: 9791938637
+--------------------------------------------------------------------------------
+--------------------
+INFO:     172.17.0.1:33432 - "POST /gds HTTP/1.1" 200 OK
+[GIN] 2024/09/25 - 08:56:05 | 200 | 51.124848802s |       127.0.0.1 | POST     "/api/chat"
+--------------------------------------------------------------------------------
+--------------------
+Discharge Summary: IP No: 2457339  UHID No: 3502408  Gender: Female  Age: 50Y   
+Discharge Summary: DIAGNOSIS : ACUTE CALCULOUS CHOLECYSTITIS TYPE 2 DIABETES 
+MELLITUS SYSTEMIC HYPERTENSION HISTORY: PATIENT CAME WITH C/O SEVERE RIGHT SIDED
+UPPER ABDOMINAL PAIN X 1 DAY C/O FEVER X 1 DAY C/O VOMITING ( 3 EPISODES)  FOOD 
+CONTENT NO H/O ABDOMINAL DISTENSION NO H/O CONSTIPATION NO OTHER COMPLAINTS PAST
+MEDICAL H/O: SIMILAR COMPLAINTS 2 MONTHS BACK AND WAS TREATED CONSERVATIVELY AND
+ADVISED USG ABDOMEN BUT PATIENT NOT TAKEN K/C/O T2DM ON TREATMENT K/C/O S.HTN ON
+TREATMENT N/K/C/O BRONCHIAL ASTHMA, EPILEPSY, TUBERCULOSIS. PAST SURGICAL 
+HISTORY: LSCS X 21 YEARS BACK PERSONAL HISTORY: MIXED DIET NORMAL SLEEP PATTERN 
+NORMAL BOWEL AND BLADDER HABITS FAMILY H/O: NIL SIGNIFICANT MENSTRUAL H/O: POST 
+MENOPAUSAL SINCE 3 YEARS PHYSICAL FINDINGS: G/E: GC - FAIR. PATIENT CONSCIOUS, 
+ALERT AND ORIENTED. BP: 170/90 MMHG PR: 90/MIN TEMP: 101 DEGREE F CBG: 123 Mg/dl
+S/E: CVS: S1S2(+) RS: BAE (+) CNS: B/L PERL (+) P/A: SOFT, BS+ RIGHT 
+HYPOCHONDRIUM TENDERNESS NO GUARDING OR RIGIDITY NO DISTENSION INVESTIGATIONS: 
+INVESTIGATIONS ENCLOSED WITHIN THE FILES. USG ABDOMEN ( 1/8/2024: DONE OUTSIDE )
+GALL BLADDER: CALCULI MEASURING 12 MM NOTED IN LUMEN IN NECK REGION ECHOGENIC 
+SLUDGE NOTED IN THE LUMEN. MILD DIFFUSWE WALL THICKENING NOTED , MEASURING 3.4 
+MM COURSE IN THE HOSPITAL : PATIENT CAME WITH ABOVE MENTIONED COMPLAINTS .ALL 
+BASELINE INVESTIGATIONS WERE DONE .SGE OPINION OBTAINED AND ORDERS FOLLOWED . 
+PATIENT MANAGED CONSERVATIVELY, DUE TO PERSONAL LOGISTICAL REASONS PATIENT WANTS
+TO DISCHARGE AGAINST MEDICAL ADVICE. HENCE PATIENT IS BEING DISCHARGED 
+TREATMENT: INJ. METRONIDAZOLE 500 MG IV 1-1-1 INJ.TRAMADOL 100 MG IN 100 ML NS 
+1-0-1 INJ.EMESET 4 MG IV 1-0-1 INJ.VITAMIN K 1 AMP 1-0-0 T.GLYCOMET GP 1 1-0-0 
+T.PROLOMET XL 25 MG 1-0-1 REVIEW IN GS V OPD SOS CONTACT DETAILS : 1. WARD 
+NUMBER: 044 4743 2416 2. AMBULANCE NUMBER : 9791938637
+--------------------------------------------------------------------------------
+--------------------
+Response: ### Patient Information
+- **Age**: 50Y
+- **Gender**: Female
+- **Patient ID**: IP No: 2457339, UHID No: 3502408
+
+### Diagnosis
+- **Provisional or Final**: ACUTE CALCULOUS CHOLECYSTITIS TYPE 2, DIABETES 
+MELLITUS, SYSTEMIC HYPERTENSION
+
+### Patient Complaints
+- C/O Severe Right-sided Upper Abdominal Pain (C/O) for X1 day
+- C/O Fever for X1 day
+- C/O Vomiting: 3 episodes
+
+### Past History or Previous Medical History
+- **Chronic Conditions**: 
+  - T2DM on treatment
+  - S.HTN on treatment
+- **Previous Surgeries**:
+  - LSCS (Low-Sided Cesarean Section) for 21 years back
+- **Other Relevant Health Information**:
+  - Mixed diet, normal sleep pattern, regular bowel and bladder habits
+  - No significant menstrual history since post-menopausal for 3 years
+
+### Personal & Family History
+- **Personal History**: 
+  - Normal lifestyle factors
+  - No substance use
+- **Family History**: 
+  - NIL (No specific family history noted)
+
+### Examination Findings (Clinical findings)
+- **Physical Examination**:
+  - Conscious, alert, and oriented.
+  - BP: 170/90 mmHg PR: 90/min Temp: 101°F CBG: 123 mg/dL
+  - CVS: S1S2(+), RS: BAE(+)
+  - CNS: B/L PERL(+)
+
+### Investigations
+- **Diagnostic Tests**:
+  - USG Abdomen (Performed on 8/1/2024, outside hospital) findings include:
+    - Gallbladder: Calculi measuring 12 mm noted in lumen. No sludge noted.
+    - Mild diffuse wall thickening measured 3.4 mm
+- **Problems of Record**: 
+  - USG Abdomen (Performed on 8/1/2024, outside hospital) findings include:
+    - Gallbladder: Calculi measuring 12 mm noted in lumen.
+
+### Course in the Hospital
+- Treatment and Progress:
+  - Managed conservatively due to logistics reasons.
+  - Discharged against medical advice with:
+    - Metronidazole (500 mg IV every 1-1-1, twice a day)
+    - Tramadol (100 mg in 100 ml NS once a day)
+    - Emetes (4 mg IV once a day)
+    - Vitamin K 1 Amp (1/0/0 T. Glycomet)
+    - Prolomet XL 25 mg twice a day
+
+### Discharge Advice
+- General advice:
+  - Follow-up: Review in GS V OPD Sos Contact Details:
+    - Ward Number: 044 4743 2416
+    - Ambulance Number: 9791938637
+- Medication Instructions at Discharge:
+  - No medication for discharge, except as per the hospital instructions.
+- Follow-up Details:
+  - No specific follow-up appointments noted.
+
+### Note: This summary is based on the information provided in the discharge 
+summary and includes all key details extracted from the patient's medical 
+records.
+--------------------------------------------------------------------------------
+--------------------
+INFO:     172.17.0.1:47586 - "POST /dsg HTTP/1.1" 200 OK
+--------------------------------------------------------------------------------
+--------------------
+Discharge Summary: IP No: 2457339  UHID No: 3502408  Gender: Female  Age: 50Y   
+Discharge Summary: DIAGNOSIS : ACUTE CALCULOUS CHOLECYSTITIS TYPE 2 DIABETES 
+MELLITUS SYSTEMIC HYPERTENSION HISTORY: PATIENT CAME WITH C/O SEVERE RIGHT SIDED
+UPPER ABDOMINAL PAIN X 1 DAY C/O FEVER X 1 DAY C/O VOMITING ( 3 EPISODES)  FOOD 
+CONTENT NO H/O ABDOMINAL DISTENSION NO H/O CONSTIPATION NO OTHER COMPLAINTS PAST
+MEDICAL H/O: SIMILAR COMPLAINTS 2 MONTHS BACK AND WAS TREATED CONSERVATIVELY AND
+ADVISED USG ABDOMEN BUT PATIENT NOT TAKEN K/C/O T2DM ON TREATMENT K/C/O S.HTN ON
+TREATMENT N/K/C/O BRONCHIAL ASTHMA, EPILEPSY, TUBERCULOSIS. PAST SURGICAL 
+HISTORY: LSCS X 21 YEARS BACK PERSONAL HISTORY: MIXED DIET NORMAL SLEEP PATTERN 
+NORMAL BOWEL AND BLADDER HABITS FAMILY H/O: NIL SIGNIFICANT MENSTRUAL H/O: POST 
+MENOPAUSAL SINCE 3 YEARS PHYSICAL FINDINGS: G/E: GC - FAIR. PATIENT CONSCIOUS, 
+ALERT AND ORIENTED. BP: 170/90 MMHG PR: 90/MIN TEMP: 101 DEGREE F CBG: 123 Mg/dl
+S/E: CVS: S1S2(+) RS: BAE (+) CNS: B/L PERL (+) P/A: SOFT, BS+ RIGHT 
+HYPOCHONDRIUM TENDERNESS NO GUARDING OR RIGIDITY NO DISTENSION INVESTIGATIONS: 
+INVESTIGATIONS ENCLOSED WITHIN THE FILES. USG ABDOMEN ( 1/8/2024: DONE OUTSIDE )
+GALL BLADDER: CALCULI MEASURING 12 MM NOTED IN LUMEN IN NECK REGION ECHOGENIC 
+SLUDGE NOTED IN THE LUMEN. MILD DIFFUSWE WALL THICKENING NOTED , MEASURING 3.4 
+MM COURSE IN THE HOSPITAL : PATIENT CAME WITH ABOVE MENTIONED COMPLAINTS .ALL 
+BASELINE INVESTIGATIONS WERE DONE .SGE OPINION OBTAINED AND ORDERS FOLLOWED . 
+PATIENT MANAGED CONSERVATIVELY, DUE TO PERSONAL LOGISTICAL REASONS PATIENT WANTS
+TO DISCHARGE AGAINST MEDICAL ADVICE. HENCE PATIENT IS BEING DISCHARGED 
+TREATMENT: INJ. METRONIDAZOLE 500 MG IV 1-1-1 INJ.TRAMADOL 100 MG IN 100 ML NS 
+1-0-1 INJ.EMESET 4 MG IV 1-0-1 INJ.VITAMIN K 1 AMP 1-0-0 T.GLYCOMET GP 1 1-0-0 
+T.PROLOMET XL 25 MG 1-0-1 REVIEW IN GS V OPD SOS CONTACT DETAILS : 1. WARD 
+NUMBER: 044 4743 2416 2. AMBULANCE NUMBER : 9791938637
+--------------------------------------------------------------------------------
+--------------------
+Response: 1. **Patient Information**
+   - **Age**: 50 years
+   - **Gender**: Female
+   - **Patient ID**: IP No: 2457339, UHID No: 3502408
+
+2. **Diagnosis**
+   - **Provisional or Final**: Final
+   - **Diagnosis**: Acute Calculous Cholecystitis, Type 2 Diabetes Mellitus, 
+Systemic Hypertension
+
+3. **Patient Complaints**
+   - Severe right-sided upper abdominal pain for 1 day
+   - Fever for 1 day
+   - Vomiting (3 episodes, food content)
+   - No abdominal distension
+   - No constipation
+
+4. **Past History or Past Medical History**
+   - **Chronic Conditions**: Type 2 Diabetes Mellitus, Systemic Hypertension
+   - **Previous Surgeries**: LSCS 21 years back
+   - **Other Relevant Health Information**: Similar complaints 2 months back and
+was treated conservatively, advised USG abdomen but patient did not undergo
+
+5. **Personal & Family History**
+   - **Personal History**: Mixed diet, normal sleep pattern, normal bowel and 
+bladder habits
+   - **Family History**: NIL significant
+
+   a. **Social History**
+      - **Lifestyle Factors**: Not mentioned
+      - **Substance Use**: Not mentioned
+
+6. **Examination Findings (Clinical findings)**
+   - **Physical Examination**: 
+      i. **Vitals**: BP: 170/90 mmHg, PR: 90/min, TEMP: 101 degrees F, CBG: 123 
+mg/dl
+      ii. **CVS (Cardiovascular System)**: S1S2(+)
+      - **RS (Respiratory System)**: BAE(+)
+      - **P/A (Per Abdomen)**: Soft, BS+, right hypochondrium tenderness, no 
+guarding or rigidity, no distension
+      - **CNS (Central Nervous System)**: B/L PERL(+)
+
+7. **Investigations**
+   - **Diagnostic Tests**: USG abdomen (1/8/2024): Gall bladder- calculi 
+measuring 12 mm noted in lumen in neck region, echogenic sludge noted in the 
+lumen, mild diffuse wall thickening noted, measuring 3.4 mm
+
+8. **Course in the Hospital**
+   - **Treatment and Progress**: Patient managed conservatively. 
+      a. **Medication Given**: 
+         - INJ. METRONIDAZOLE 500 MG IV 1-1-1
+         - INJ. TRAMADOL 100 MG IN 100 ML NS 1-0-1
+         - INJ. EMESET 4 MG IV 1-0-1
+         - INJ. VITAMIN K 1 AMP 1-0-0
+         - T. GLYCOMET GP 1 1-0-0
+         - T. PROLOMET XL 25 MG 1-0-1
+      b. **Procedure Notes & Details (For Surgery Only)**: Not applicable
+      c. **Post-operative Treatment (For Surgery Only)**: Not applicable
+
+9. **Discharge Advice**
+   - **General Advice**: Not mentioned
+      a. **Medication**: INJ. METRONIDAZOLE 500 MG IV 1-1-1, INJ. TRAMADOL 100 
+MG IN 100 ML NS 1-0-1, INJ. EMESET 4 MG IV 1-0-1
+      b. **Follow-up Details**:
+         i. **Ward Number**: 044 4743 2416
+         ii. **Ambulance Number**: 9791938637
+--------------------------------------------------------------------------------
+--------------------
+INFO:     172.17.0.1:37588 - "POST /gds HTTP/1.1" 200 OK
+[GIN] 2024/09/25 - 08:56:10 | 200 |  133.630227ms |       127.0.0.1 | POST     "/api/embeddings"
+--------------------------------------------------------------------------------
+--------------------
+Query: factors for belly fat and how to prevent it?
+--------------------------------------------------------------------------------
+--------------------
+Response:
+[
+    {
+        'result': 'The provided context, "Non-alcoholic fatty liver disease 
+(NAFLD)," does not directly address the query "factors for belly fat and how to 
+prevent it?" However, some related information can be derived from the 
+content.\n\nFactors for belly fat (visceral fat) and NAFLD are somewhat related.
+The risk factors for NAFLD mentioned in the content, such as obesity, being 
+overweight, having an "apple-like" body shape, type 2 diabetes, high blood 
+pressure, high cholesterol, metabolic syndrome, and smoking, can also contribute
+to belly fat.\n\nTo prevent or reduce belly fat, consider the following 
+tips:\n\n1. **Maintain a healthy weight**: Aim for a BMI between 18.5 and 24.9 
+to reduce the risk of visceral fat.\n2. **Exercise regularly**: Engage in 
+moderate-intensity activities, such as walking or cycling, for at least 150 
+minutes per week.\n3. **Eat a balanced diet**: Focus on whole foods like fruits,
+vegetables, lean proteins, and whole grains. Limit your intake of processed 
+foods, sugar, and saturated fats.\n4. **Reduce stress**: Chronic stress can 
+contribute to increased belly fat. Engage in stress-reducing activities like 
+yoga, meditation, or deep breathing exercises.\n5. **Get enough sleep**: Aim for
+7-8 hours of sleep per night to help regulate hormones and metabolism.\n6. 
+**Monitor and manage health conditions**: If you have conditions like type 2 
+diabetes, high blood pressure, or high cholesterol, work with your healthcare 
+provider to manage them effectively.\n\nWhile the provided context does not 
+directly address belly fat, the suggested tips can help reduce your risk of 
+NAFLD and related health conditions. Consult a healthcare professional for 
+personalized advice on managing your specific health concerns.',
+        'document_id': 'non-alcoholic-fatty-liver-disease.md'
+    },
+    {
+        'result': "The factors for belly fat and how to prevent it are not 
+directly addressed in the provided context, which focuses on stretch marks. 
+However, it does mention that maintaining a healthy weight can reduce the 
+chances of getting stretch marks, which can be related to belly fat.\n\nTo 
+provide some general information on the query, factors that contribute to belly 
+fat include:\n\n* Genetics\n* Age\n* Sedentary lifestyle\n* Poor diet (high in 
+sugar, salt, and unhealthy fats)\n* Stress\n* Hormonal imbalances\n* Sleep 
+deprivation\n* Certain medical conditions (such as Cushing's syndrome)\n\nTo 
+prevent belly fat, you can try the following:\n\n* Maintain a healthy weight 
+through a balanced diet and regular exercise\n* Engage in physical activities 
+that target the core muscles, such as planks, crunches, and leg raises\n* 
+Incorporate high-fiber foods and lean protein sources into your diet\n* Limit 
+your intake of processed and high-calorie foods\n* Get enough sleep and manage 
+stress levels\n* Stay hydrated and monitor your portion sizes\n\nIt's essential 
+to note that this is general information, and it's best to consult a healthcare 
+professional for personalized advice on managing belly fat.",
+        'document_id': 'stretch-marks.md'
+    }
+]
+--------------------------------------------------------------------------------
+--------------------
+INFO:     172.17.0.1:39876 - "POST /rag-response HTTP/1.1" 200 OK
+--------------------------------------------------------------------------------
+--------------------
+Discharge Summary: IP No: 2457339  UHID No: 3502408  Gender: Female  Age: 50Y   
+Discharge Summary: DIAGNOSIS : ACUTE CALCULOUS CHOLECYSTITIS TYPE 2 DIABETES 
+MELLITUS SYSTEMIC HYPERTENSION HISTORY: PATIENT CAME WITH C/O SEVERE RIGHT SIDED
+UPPER ABDOMINAL PAIN X 1 DAY C/O FEVER X 1 DAY C/O VOMITING ( 3 EPISODES)  FOOD 
+CONTENT NO H/O ABDOMINAL DISTENSION NO H/O CONSTIPATION NO OTHER COMPLAINTS PAST
+MEDICAL H/O: SIMILAR COMPLAINTS 2 MONTHS BACK AND WAS TREATED CONSERVATIVELY AND
+ADVISED USG ABDOMEN BUT PATIENT NOT TAKEN K/C/O T2DM ON TREATMENT K/C/O S.HTN ON
+TREATMENT N/K/C/O BRONCHIAL ASTHMA, EPILEPSY, TUBERCULOSIS. PAST SURGICAL 
+HISTORY: LSCS X 21 YEARS BACK PERSONAL HISTORY: MIXED DIET NORMAL SLEEP PATTERN 
+NORMAL BOWEL AND BLADDER HABITS FAMILY H/O: NIL SIGNIFICANT MENSTRUAL H/O: POST 
+MENOPAUSAL SINCE 3 YEARS PHYSICAL FINDINGS: G/E: GC - FAIR. PATIENT CONSCIOUS, 
+ALERT AND ORIENTED. BP: 170/90 MMHG PR: 90/MIN TEMP: 101 DEGREE F CBG: 123 Mg/dl
+S/E: CVS: S1S2(+) RS: BAE (+) CNS: B/L PERL (+) P/A: SOFT, BS+ RIGHT 
+HYPOCHONDRIUM TENDERNESS NO GUARDING OR RIGIDITY NO DISTENSION INVESTIGATIONS: 
+INVESTIGATIONS ENCLOSED WITHIN THE FILES. USG ABDOMEN ( 1/8/2024: DONE OUTSIDE )
+GALL BLADDER: CALCULI MEASURING 12 MM NOTED IN LUMEN IN NECK REGION ECHOGENIC 
+SLUDGE NOTED IN THE LUMEN. MILD DIFFUSWE WALL THICKENING NOTED , MEASURING 3.4 
+MM COURSE IN THE HOSPITAL : PATIENT CAME WITH ABOVE MENTIONED COMPLAINTS .ALL 
+BASELINE INVESTIGATIONS WERE DONE .SGE OPINION OBTAINED AND ORDERS FOLLOWED . 
+PATIENT MANAGED CONSERVATIVELY, DUE TO PERSONAL LOGISTICAL REASONS PATIENT WANTS
+TO DISCHARGE AGAINST MEDICAL ADVICE. HENCE PATIENT IS BEING DISCHARGED 
+TREATMENT: INJ. METRONIDAZOLE 500 MG IV 1-1-1 INJ.TRAMADOL 100 MG IN 100 ML NS 
+1-0-1 INJ.EMESET 4 MG IV 1-0-1 INJ.VITAMIN K 1 AMP 1-0-0 T.GLYCOMET GP 1 1-0-0 
+T.PROLOMET XL 25 MG 1-0-1 REVIEW IN GS V OPD SOS CONTACT DETAILS : 1. WARD 
+NUMBER: 044 4743 2416 2. AMBULANCE NUMBER : 9791938637
+--------------------------------------------------------------------------------
+--------------------
+Response: 1. **Patient Information**
+   - **Age**: 50Y
+   - **Gender**: Female
+   - **Patient ID**: IP No: 2457339, UHID No: 3502408
+
+2. **Diagnosis**
+   - **Provisional or Final**: ACUTE CALCULOUS CHOLECYSTITIS, TYPE 2 DIABETES 
+MELLITUS, SYSTEMIC HYPERTENSION
+
+3. **Patient Complaints**
+   - Severe right-sided upper abdominal pain for 1 day
+   - Fever for 1 day
+   - Vomiting (3 episodes) with food content
+
+4. **Past History or Past Medical History**
+   - **Chronic Conditions**: Type 2 Diabetes Mellitus, Systemic Hypertension
+   - **Previous Surgeries**: LSCS (Lower Segment Caesarean Section) 21 years 
+back
+   - **Other Relevant Health Information**: Similar complaints 2 months back and
+was treated conservatively, advised for USG abdomen but not taken
+
+5. **Personal & Family History**
+   - **Personal History**: Postmenopausal since 3 years
+   - **Family History**: NIL
+
+   a. **Social History**
+      - **Lifestyle Factors**: Mixed diet, normal sleep pattern, normal bowel 
+and bladder habits
+      - **Substance Use**: No information provided
+
+6. **Examination Findings (Clinical findings)**
+   - **Physical Examination**
+      i. **Vitals**: BP: 170/90 mmHg, PR: 90/min, Temp: 101°F, CBG: 123 mg/dl
+      ii. **CVS (Cardiovascular System)**: S1S2 (+)
+      - **RS (Respiratory System)**: BAE (+)
+      - **P/A (Per Abdomen)**: SOFT, BS+, Right hypochondrium tenderness, no 
+guarding or rigidity
+      - **CNS (Central Nervous System)**: B/L PERL (+)
+      iii. **Local Examination**: Not mentioned
+
+7. **Investigations**
+   - **Diagnostic Tests**: USG abdomen (done outside) - Gallbladder: Calculi 
+measuring 12 mm noted in lumen in neck region, Echogenic sludge noted in the 
+lumen, Mild diffuse wall thickening noted, measuring 3.4 mm
+
+8. **Course in the Hospital**
+   - **Treatment and Progress**: Patient managed conservatively due to personal 
+logistical reasons, patient wants to discharge against medical advice
+      a. **Medication Given**: Inj. Metronidazole 500 mg IV 1-1-1, Inj. Tramadol
+100 mg in 100 ml NS 1-0-1, Inj. Emeset 4 mg IV 1-0-1, Inj. Vitamin K 1 amp 
+1-0-0, T. Glycomet GP 1 1-0-0, T. Prolomet XL 25 mg 1-0-1
+      b. Not applicable
+      c. Not applicable
+
+9. **Discharge Advice**
+   - **General Advice**: Not mentioned
+      a. **Medication**: Continue medications as prescribed
+      b. **Follow-up Details**
+         i. **Ward Number**: 044 4743 2416
+         ii. **Ambulance Number**: 9791938637, SOS contact
+--------------------------------------------------------------------------------
+--------------------
+INFO:     172.17.0.1:53194 - "POST /gds HTTP/1.1" 200 OK
+--------------------------------------------------------------------------------
+--------------------
+Discharge Summary: IP No: 2457339  UHID No: 3502408  Gender: Female  Age: 50Y   
+Discharge Summary: DIAGNOSIS : ACUTE CALCULOUS CHOLECYSTITIS TYPE 2 DIABETES 
+MELLITUS SYSTEMIC HYPERTENSION HISTORY: PATIENT CAME WITH C/O SEVERE RIGHT SIDED
+UPPER ABDOMINAL PAIN X 1 DAY C/O FEVER X 1 DAY C/O VOMITING ( 3 EPISODES)  FOOD 
+CONTENT NO H/O ABDOMINAL DISTENSION NO H/O CONSTIPATION NO OTHER COMPLAINTS PAST
+MEDICAL H/O: SIMILAR COMPLAINTS 2 MONTHS BACK AND WAS TREATED CONSERVATIVELY AND
+ADVISED USG ABDOMEN BUT PATIENT NOT TAKEN K/C/O T2DM ON TREATMENT K/C/O S.HTN ON
+TREATMENT N/K/C/O BRONCHIAL ASTHMA, EPILEPSY, TUBERCULOSIS. PAST SURGICAL 
+HISTORY: LSCS X 21 YEARS BACK PERSONAL HISTORY: MIXED DIET NORMAL SLEEP PATTERN 
+NORMAL BOWEL AND BLADDER HABITS FAMILY H/O: NIL SIGNIFICANT MENSTRUAL H/O: POST 
+MENOPAUSAL SINCE 3 YEARS PHYSICAL FINDINGS: G/E: GC - FAIR. PATIENT CONSCIOUS, 
+ALERT AND ORIENTED. BP: 170/90 MMHG PR: 90/MIN TEMP: 101 DEGREE F CBG: 123 Mg/dl
+S/E: CVS: S1S2(+) RS: BAE (+) CNS: B/L PERL (+) P/A: SOFT, BS+ RIGHT 
+HYPOCHONDRIUM TENDERNESS NO GUARDING OR RIGIDITY NO DISTENSION INVESTIGATIONS: 
+INVESTIGATIONS ENCLOSED WITHIN THE FILES. USG ABDOMEN ( 1/8/2024: DONE OUTSIDE )
+GALL BLADDER: CALCULI MEASURING 12 MM NOTED IN LUMEN IN NECK REGION ECHOGENIC 
+SLUDGE NOTED IN THE LUMEN. MILD DIFFUSWE WALL THICKENING NOTED , MEASURING 3.4 
+MM COURSE IN THE HOSPITAL : PATIENT CAME WITH ABOVE MENTIONED COMPLAINTS .ALL 
+BASELINE INVESTIGATIONS WERE DONE .SGE OPINION OBTAINED AND ORDERS FOLLOWED . 
+PATIENT MANAGED CONSERVATIVELY, DUE TO PERSONAL LOGISTICAL REASONS PATIENT WANTS
+TO DISCHARGE AGAINST MEDICAL ADVICE. HENCE PATIENT IS BEING DISCHARGED 
+TREATMENT: INJ. METRONIDAZOLE 500 MG IV 1-1-1 INJ.TRAMADOL 100 MG IN 100 ML NS 
+1-0-1 INJ.EMESET 4 MG IV 1-0-1 INJ.VITAMIN K 1 AMP 1-0-0 T.GLYCOMET GP 1 1-0-0 
+T.PROLOMET XL 25 MG 1-0-1 REVIEW IN GS V OPD SOS CONTACT DETAILS : 1. WARD 
+NUMBER: 044 4743 2416 2. AMBULANCE NUMBER : 9791938637
+--------------------------------------------------------------------------------
+--------------------
+Response: 1. **Patient Information**
+   - **Age**: 50 years
+   - **Gender**: Female
+   - **Patient ID**: IP No: 2457339, UHID No: 3502408
+
+2. **Diagnosis**
+   - **Final**: Acute Calculous Cholecystitis, Type 2 Diabetes Mellitus, 
+Systemic Hypertension
+
+3. **Patient Complaints**
+   - Severe right-sided upper abdominal pain for 1 day
+   - Fever for 1 day
+   - Vomiting (3 episodes) with food content
+
+4. **Past History or Past Medical History**
+   - **Chronic Conditions**: 
+     * Type 2 Diabetes Mellitus
+     * Systemic Hypertension
+   - **Previous Surgeries**: Lower Segment Cesarean Section (LSCS) 21 years back
+   - **Other Relevant Health Information**: 
+     * Admitted 2 months ago with similar complaints and was treated 
+conservatively
+     * Had advised USG abdomen but not taken
+
+5. **Personal & Family History**
+   - **Personal History**: Post-menopausal since 3 years
+     * Mixed diet
+     * Normal sleep pattern
+     * Normal bowel and bladder habits
+   - **Family History**: NIL
+
+   a. **Social History**
+      - **Lifestyle Factors**: NIL mentioned
+      - **Substance Use**: NIL mentioned
+
+6. **Examination Findings (Clinical findings)**
+   - **Physical Examination**: 
+     i. **Vitals**: BP: 170/90 mmHg, PR: 90/min, TEMP: 101°F, CBG: 123 mg/dl
+     ii. **CVS (Cardiovascular System)**: S1S2(+)
+        **RS (Respiratory System)**: BAE (+)
+        **P/A (Per Abdomen)**: Soft, BS+ in right hypochondrium, tenderness 
+present, no guarding or rigidity
+        **CNS (Central Nervous System)**: B/L PERL (+)
+   iii. **Local Examination**: NIL mentioned
+
+7. **Investigations**
+   - **Diagnostic Tests**: USG abdomen (done outside on 1/8/2024) shows:
+     * Gall bladder calculi measuring 12 mm in lumen in neck region
+     * Echogenic sludge noted in the lumen
+     * Mild diffuse wall thickening noted, measuring 3.4 mm
+
+8. **Course in the Hospital**
+   - **Treatment and Progress**: Managed conservatively
+     a. **Medication Given**: Inj. Metronidazole 500 mg IV 1-1-1, Inj. Tramadol 
+100 mg in 100 ml NS 1-0-1, Inj. Emeset 4 mg IV 1-0-1, Inj. Vitamin K 1 amp 
+1-0-0, T. Glycomet GP 1 1-0-0, T. Prolomet XL 25 mg 1-0-1
+     b. **Procedure Notes & Details (For Surgery Only)**: NIL
+     c. **Post-operative Treatment (For Surgery Only)**: NIL
+
+9. **Discharge Advice**
+   - **General Advice**: NIL mentioned
+     a. **Medication**: As per the medication list provided in the discharge 
+summary
+     b. **Follow-up Details**:
+       i. **Ward Number**: 044 4743 2416
+       ii. **Ambulance Number**: 9791938637
+--------------------------------------------------------------------------------
+--------------------
+INFO:     172.17.0.1:53194 - "POST /gds HTTP/1.1" 200 OK
+[GIN] 2024/09/25 - 09:00:25 | 200 |          2m2s |       127.0.0.1 | POST     "/api/generate"
+[GIN] 2024/09/25 - 09:05:43 | 200 |         2m20s |       127.0.0.1 | POST     "/api/generate"
+INFO:     172.17.0.1:46770 - "GET / HTTP/1.1" 307 Temporary Redirect
+INFO:     172.17.0.1:46770 - "GET /docs HTTP/1.1" 200 OK
+INFO:     172.17.0.1:46770 - "GET /openapi.json HTTP/1.1" 200 OK
