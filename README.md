@@ -5,7 +5,7 @@
 ##### clone the repo and run the ollama_rag.ipynb file to get the db folder for RAG and then run the following command to start the docker container
 
 ```bash
-docker-compose up --build
+docker compose up --build
 ```
 ##### for detached mode
 ```bash
