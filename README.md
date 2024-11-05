@@ -9,7 +9,7 @@ docker-compose up --build
 ```
 ##### for detached mode
 ```bash
-docker-compose up --build -d
+docker compose up --build -d
 ```
 
 
